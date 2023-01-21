@@ -58,6 +58,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "disableHostCheck": true,
             "browserTarget": "noteit-ng-app:build"
           },
           "configurations": {
@@ -84,7 +85,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              {
+                "input": "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+              },
+              {
+                "input": "../node_modules/font-awesome/css/font-awesome.min.css"
+              },"src/styles.css"
             ],
             "scripts": []
           }
